@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Calculadora de interes simple</h1><br>
+  <form action="/" method="post">
+    <div class="row">
+      <div class="col">
+        <label for="capital">Capital</label>
+        <input type="number" name="capital" placeholder="100000" value="{{capital}}" required>
+      </div>
+      <div class="col">
+        <label for="interest">Interes anual (%)</label>
+        <input type="number" name="interest" placeholder="10" value="{{interest}}" required>
+      </div>
+      <div class="col">
+        <label for="years">Años a calcular</label>
+        <input type="number" name="years" placeholder="5" value="{{years}}" required>
+      </div>
+    </div>
+    <br>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button type="submit" class="btn btn-outline-success me-md-2">Calcular Interes</button>
+    </div>
+  </form>
+  {{#if calculateTotal}}
+  <h3>El interes simple es: <strong>${{calculateTotal}}</strong></h3>
+  {{/if}}
+</div>
